@@ -1,5 +1,4 @@
-import { styled } from "styled-components";
-import css from "styled-jsx/css";
+import styled, { css } from "styled-components";
 import { primary } from "@/lib/colors";
 
 export const ButtonStyle = css`
@@ -22,6 +21,7 @@ export const ButtonStyle = css`
       display: block;
       width: 100%;
     `}
+
   ${(props) =>
     props.white &&
     !props.outline &&
@@ -29,6 +29,7 @@ export const ButtonStyle = css`
       background-color: #fff;
       color: #000;
     `}
+
   ${(props) =>
     props.white &&
     props.outline &&
@@ -37,6 +38,7 @@ export const ButtonStyle = css`
       color: #fff;
       border: 1px solid #fff;
     `}
+
   ${(props) =>
     props.black &&
     !props.outline &&
