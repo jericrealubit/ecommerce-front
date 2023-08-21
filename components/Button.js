@@ -21,6 +21,29 @@ export const ButtonStyle = css`
       display: block;
       width: 100%;
     `}
+  ${(props) =>
+    props.block &&
+    css`
+      display: block;
+      width: 100%;
+    `}
+
+  ${(props) =>
+    props.black &&
+    !props.outline &&
+    css`
+      background-color: ##000;
+      color: #fff;
+    `}
+
+  ${(props) =>
+    props.black &&
+    props.outline &&
+    css`
+      background-color: transparent;
+      color: #000;
+      border: 1px solid #000;
+    `}
 
   ${(props) =>
     props.white &&
