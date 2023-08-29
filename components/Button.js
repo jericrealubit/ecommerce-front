@@ -3,7 +3,7 @@ import { primary } from "@/lib/colors";
 
 export const ButtonStyle = css`
   border: 0;
-  padding: 5px 15px;
+
   border-radius: 5px;
   cursor: pointer;
   display: inline-flex;
@@ -101,6 +101,18 @@ export const ButtonStyle = css`
       svg {
         height: 20px;
       }
+    `}
+
+    ${(props) =>
+    props.size === "s" &&
+    css`
+      padding: 5px !important;
+    `}
+
+    ${(props) =>
+    props.size !== "s" &&
+    css`
+      padding: 5px 15px;
     `}
 `;
 
