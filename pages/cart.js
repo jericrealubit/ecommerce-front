@@ -9,6 +9,7 @@ import { styled } from "styled-components";
 import axios from "axios";
 import Table from "@/components/Table";
 import Input from "@/components/Input";
+import { useRouter } from "next/router";
 
 const ColumnsWrapper = styled.div`
   display: grid;
@@ -65,6 +66,7 @@ const CartPage = () => {
   const [postalCode, setPostalCode] = useState("");
   const [streetAddress, setStreetAddress] = useState("");
   const [country, setCountry] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
     if (cartProducts.length) {
@@ -96,7 +98,8 @@ const CartPage = () => {
     });
 
     if (response.data.url) {
-      window.location = response.data.url;
+      //window.location = response.data.url;
+      router.push(response.data.url);
     }
   };
 
@@ -106,7 +109,7 @@ const CartPage = () => {
     total += price;
   }
 
-  if (window.location.href.includes("success")) {
+  if (router.asPath.includes("success")) {
     return (
       <>
         <Header />
