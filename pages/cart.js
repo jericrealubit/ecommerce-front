@@ -58,7 +58,8 @@ const CityHolder = styled.div`
 `;
 
 const CartPage = () => {
-  const { cartProducts, addProduct, removeProduct } = useContext(CartContext);
+  const { cartProducts, addProduct, removeProduct, clearCart } =
+    useContext(CartContext);
   const [products, setProducts] = useState([]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -66,6 +67,7 @@ const CartPage = () => {
   const [postalCode, setPostalCode] = useState("");
   const [streetAddress, setStreetAddress] = useState("");
   const [country, setCountry] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -77,6 +79,13 @@ const CartPage = () => {
       setProducts([]);
     }
   }, [cartProducts]);
+
+  useEffect(() => {
+    if (router.asPath.includes("success")) {
+      setIsSuccess(true);
+      clearCart();
+    }
+  }, []);
 
   const moreOfThisProduct = (id) => {
     addProduct(id);
@@ -109,7 +118,7 @@ const CartPage = () => {
     total += price;
   }
 
-  if (router.asPath.includes("success")) {
+  if (isSuccess) {
     return (
       <>
         <Header />
