@@ -43,9 +43,8 @@ const ProductImageBox = styled.div`
   }
 `;
 
-const productTitle = styled.div`
-  max-width: 80px;
-  overflow: hidden;
+const ProductTitle = styled.div`
+  max-width: 100%;
 `;
 
 const QuantityLabel = styled.span`
@@ -159,7 +158,7 @@ const CartPage = () => {
                         <ProductImageBox>
                           <img src={product.images[0]} alt="" />
                         </ProductImageBox>
-                        <productTitle>{product.title}</productTitle>
+                        <ProductTitle>{product.title}</ProductTitle>
                       </ProductInfoCell>
                       <td>${product.price}</td>
                       <td>
