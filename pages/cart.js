@@ -106,7 +106,6 @@ const CartPage = () => {
     });
 
     if (response.data.url) {
-      //window.location = response.data.url;
       router.push(response.data.url);
     }
   };
