@@ -49,6 +49,12 @@ const ColumnsWrapper = styled.div`
 const Column = styled.div`
   display: flex;
   align-items: center;
+  ${(props) =>
+    props.white &&
+    `
+      background-color: white;
+      border-radius: 50px;
+    `}
 `;
 const ButtonsWrapper = styled.div`
   margin-top: 25px;
@@ -84,11 +90,8 @@ const Featured = ({ product }) => {
               </ButtonsWrapper>
             </div>
           </Column>
-          <Column>
-            <img
-              src="https://jeric-next-ecommerce.s3.amazonaws.com/1691493466321.png"
-              alt={product.title}
-            />
+          <Column white={1}>
+            <img src={product.images[0]} alt={product.title} />
           </Column>
         </ColumnsWrapper>
       </Center>

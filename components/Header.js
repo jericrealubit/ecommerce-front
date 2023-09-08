@@ -54,7 +54,8 @@ const NavButton = styled.button`
   color: white;
   cursor: pointer;
   position: relative;
-  z-index: 3 @media screen and (min-width: 768px) {
+  z-index: 3;
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `;

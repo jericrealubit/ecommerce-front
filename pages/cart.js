@@ -73,6 +73,14 @@ const CityHolder = styled.div`
   gap: 5px;
 `;
 
+const EditCartWrapper = styled.div`
+  text-align: center;
+`;
+
+const TotalTd = styled.td`
+  font-weight: 600;
+`;
+
 const CartPage = () => {
   const { cartProducts, addProduct, removeProduct, clearCart } =
     useContext(CartContext);
@@ -178,25 +186,27 @@ const CartPage = () => {
                       </ProductInfoCell>
                       <td>${product.price}</td>
                       <td>
-                        <Button
-                          size={"s"}
-                          onClick={() => lessOfThisProduct(product._id)}
-                        >
-                          -
-                        </Button>
-                        <QuantityLabel>
-                          {
-                            cartProducts.filter((id) => id === product._id)
-                              .length
-                          }
-                        </QuantityLabel>
+                        <EditCartWrapper>
+                          <Button
+                            size={"s"}
+                            onClick={() => lessOfThisProduct(product._id)}
+                          >
+                            -
+                          </Button>
+                          <QuantityLabel>
+                            {
+                              cartProducts.filter((id) => id === product._id)
+                                .length
+                            }
+                          </QuantityLabel>
 
-                        <Button
-                          size={"s"}
-                          onClick={() => moreOfThisProduct(product._id)}
-                        >
-                          +
-                        </Button>
+                          <Button
+                            size={"s"}
+                            onClick={() => moreOfThisProduct(product._id)}
+                          >
+                            +
+                          </Button>
+                        </EditCartWrapper>
                       </td>
                       <td>
                         $
@@ -209,7 +219,7 @@ const CartPage = () => {
                     <th>TOTAL</th>
                     <td></td>
                     <td></td>
-                    <td>${total}</td>
+                    <TotalTd>${total}</TotalTd>
                   </tr>
                 </tbody>
               </Table>
