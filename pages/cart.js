@@ -29,6 +29,7 @@ const Box = styled.div`
 
 const ProductInfoCell = styled.div`
   padding: 10px 0;
+  cursor: pointer;
 `;
 
 const ProductImageBox = styled.div`
@@ -178,7 +179,9 @@ const CartPage = () => {
                 <tbody>
                   {products.map((product) => (
                     <tr key={product._id}>
-                      <ProductInfoCell>
+                      <ProductInfoCell
+                        onClick={() => router.push("/product/" + product._id)}
+                      >
                         <ProductImageBox>
                           <img src={product.images[0]} alt="" />
                         </ProductImageBox>

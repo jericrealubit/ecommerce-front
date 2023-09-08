@@ -53,7 +53,7 @@ const Column = styled.div`
     props.white &&
     `
       background-color: white;
-      border-radius: 50px;
+      border-radius: 10px;
     `}
 `;
 const ButtonsWrapper = styled.div`

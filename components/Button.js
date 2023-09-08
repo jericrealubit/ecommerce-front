@@ -6,7 +6,6 @@ export const ButtonStyle = css`
 
   border-radius: 5px;
   cursor: pointer;
-  display: inline-flex;
   align-items: center;
   text-decoration: none;
   font-family: "Poppins", sans-serif;

@@ -76,6 +76,7 @@ const ProductBox = ({ _id, title, description, price, images }) => {
               primary={1}
               outline={1}
             >
+              <CartIcon />
               Add to cart
             </Button>
           </div>
