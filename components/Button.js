@@ -3,9 +3,9 @@ import { primary } from "@/lib/colors";
 
 export const ButtonStyle = css`
   border: 0;
-
   border-radius: 5px;
   cursor: pointer;
+  display: inline-flex;
   align-items: center;
   text-decoration: none;
   font-family: "Poppins", sans-serif;

@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
 import Button from "./Button";
-import CartIcon from "./icons/CartIcon";
 import Link from "next/link";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
@@ -76,7 +75,6 @@ const ProductBox = ({ _id, title, description, price, images }) => {
               primary={1}
               outline={1}
             >
-              <CartIcon />
               Add to cart
             </Button>
           </div>
