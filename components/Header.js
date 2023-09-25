@@ -11,6 +11,7 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 0;
 `;
+
 const Logo = styled(Link)`
   color: #aaa;
   text-decoration: none;

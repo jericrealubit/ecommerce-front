@@ -1,10 +1,7 @@
 import Featured from "@/components/Featured";
-import Header from "@/components/Header";
 import NewProducts from "@/components/NewProducts";
 import { mongooseConnect } from "@/lib/mongoose";
 import { Product } from "@/models/Product";
-import NoSsr from "../components/NoSsr";
-import Footer from "@/components/Footer";
 
 const HomePage = ({ featuredProduct, newProducts }) => {
   return (
