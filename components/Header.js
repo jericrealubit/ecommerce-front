@@ -4,12 +4,15 @@ import Center from "./Center";
 import { useContext, useState } from "react";
 import { CartContext } from "@/components/CartContext";
 import BarsIcon from "./icons/Bars";
+import { useRouter } from "next/router";
 
 const StyledHeader = styled.header`
   background-color: #222;
+  position: sticky;
+  top: 0;
 `;
 const Logo = styled(Link)`
-  color: #fff;
+  color: #aaa;
   text-decoration: none;
   position: relative;
   z-index: 3;
@@ -40,12 +43,16 @@ const NavLink = styled(Link)`
   @media screen and (min-width: 768px) {
     padding: 0;
   }
+  &:hover,
+  &.active {
+    color: white;
+  }
 `;
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 10px 0;
 `;
 
 const NavButton = styled.button`
@@ -63,6 +70,7 @@ const NavButton = styled.button`
 `;
 
 const Header = () => {
+  const router = useRouter();
   const { cartProducts } = useContext(CartContext);
   const [mobileNavActive, setMobileNavActive] = useState(false);
   return (
@@ -71,11 +79,26 @@ const Header = () => {
         <Wrapper>
           <Logo href={"/"}>Ecommerce</Logo>
           <StyledNav mobileNavActive={mobileNavActive}>
-            <NavLink href={"/"}>Home</NavLink>
-            <NavLink href={"/products"}>All products</NavLink>
+            <NavLink
+              href={"/"}
+              className={router.pathname == "/" ? "active" : ""}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              href={"/products"}
+              className={router.pathname == "/products" ? "active" : ""}
+            >
+              All products
+            </NavLink>
             {/* <NavLink href={"/categories"}>Categories</NavLink>
             <NavLink href={"/account"}>Account</NavLink> */}
-            <NavLink href={"/cart"}>Cart ({cartProducts.length})</NavLink>
+            <NavLink
+              href={"/cart"}
+              className={router.pathname == "/cart" ? "active" : ""}
+            >
+              Cart ({cartProducts.length})
+            </NavLink>
           </StyledNav>
           <NavButton onClick={() => setMobileNavActive((prev) => !prev)}>
             <BarsIcon />

@@ -1,7 +1,6 @@
 import Button from "@/components/Button";
 import { CartContext } from "@/components/CartContext";
 import Center from "@/components/Center";
-import Header from "@/components/Header";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useContext } from "react";
@@ -145,7 +144,6 @@ const CartPage = () => {
   if (isSuccess) {
     return (
       <>
-        <Header />
         <Center>
           <ColumnsWrapper>
             <Box>
@@ -160,7 +158,6 @@ const CartPage = () => {
 
   return (
     <>
-      <Header />
       <Center>
         <ColumnsWrapper>
           <Box>
