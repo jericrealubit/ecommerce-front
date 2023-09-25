@@ -12,6 +12,8 @@ const StyledFooter = styled.footer`
   background-color: #222;
   color: #aaa;
   margin-top: 40px;
+  bottom: 0;
+  width: 100%;
 `;
 
 const Wrapper = styled.div`

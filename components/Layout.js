@@ -4,7 +4,7 @@ import NoSsr from "./NoSsr";
 import styled from "styled-components";
 
 const Content = styled.div`
-  min-height: 80vh;
+  min-height: 83vh;
 `;
 
 const Layout = ({ children }) => {
