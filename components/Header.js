@@ -21,7 +21,7 @@ const Logo = styled(Link)`
 
 const StyledNav = styled.nav`
   ${(props) =>
-    props.mobileNavActive ? ` display: block; ` : ` display: none; `}
+    props.mobilenavactive ? ` display: block; ` : ` display: none; `}
   gap: 15px;
   position: fixed;
   top: 0;
@@ -79,16 +79,16 @@ const Header = () => {
       <Center>
         <Wrapper>
           <Logo href={"/"}>Ecommerce</Logo>
-          <StyledNav mobileNavActive={mobileNavActive}>
+          <StyledNav mobilenavactive={mobileNavActive}>
             <NavLink
               href={"/"}
-              className={router.pathname == "/" ? "active" : ""}
+              className={router.pathname == "/" ? "active" : undefined}
             >
               Home
             </NavLink>
             <NavLink
               href={"/products"}
-              className={router.pathname == "/products" ? "active" : ""}
+              className={router.pathname == "/products" ? "active" : undefined}
             >
               All products
             </NavLink>
@@ -96,7 +96,7 @@ const Header = () => {
             <NavLink href={"/account"}>Account</NavLink> */}
             <NavLink
               href={"/cart"}
-              className={router.pathname == "/cart" ? "active" : ""}
+              className={router.pathname == "/cart" ? "active" : undefined}
             >
               Cart ({cartProducts.length})
             </NavLink>
