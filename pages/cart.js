@@ -75,6 +75,7 @@ const CityHolder = styled.div`
 
 const EditCartWrapper = styled.div`
   text-align: center;
+  width: 65px;
 `;
 
 const TotalTd = styled.td`
