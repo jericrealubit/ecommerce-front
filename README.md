@@ -1,5 +1,3 @@
-### URL: https://nextjs-ecommerce-front.netlify.app/
-
 # E-commerce Frontend (Built with Next.js)
 
 Welcome to the E-commerce Frontend repository! This project is a modern, performant, and scalable frontend for an e-commerce platform, built using Next.js and a suite of powerful JavaScript libraries.
@@ -19,13 +17,14 @@ This application provides the client-side experience for an online store, allowi
 *   **SEO Optimized:** Leveraging Next.js features and `react-helmet` for better search engine visibility.
 
 ## 🖼️ Screenshots
-
+```bash
 | Desktop                                              | Mobile                                              |
 | ---------------------------------------------------- | --------------------------------------------------- |
 | <img src="docs/screenshots/desktop.png" width="420"> | <img src="docs/screenshots/mobile.png" width="200"> |
+```
 
 ## 🚀 Live Demo
-https://nextjs-ecommerce-front.netlify.app/
+### URL: https://nextjs-ecommerce-front.netlify.app/
 
 ## 🛠️ Technologies Used
 
@@ -123,7 +122,7 @@ In the project directory, you can run:
     Runs ESLint to check for code style issues and potential errors.
 
 ## 🏗️ Project Structure (Simplified)
-
+```bash
 ecommerce-front/
 ├── components/ # Reusable UI components
 ├── lib/ # Utility functions, Stripe/DB initializers
@@ -140,6 +139,7 @@ ecommerce-front/
 ├── .env.local # Environment variables (ignored by Git)
 ├── package.json
 └── README.md
+```
 
 ## 🚀 Deployment
 
